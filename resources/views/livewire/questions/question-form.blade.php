@@ -30,7 +30,7 @@
 
                         <div class="mt-4">
                             <x-input-label for="more_info_link" value="More Info Link" />
-                            <x-text-input wire:model.defer="question.more_info_link" id="more_info_link" class="block mt-1 w-full" type="text" name="more_info_link" />
+                            <x-text-input wire:model.defer="question.more_info_link" id="more_info_link" class="block mt-1 w-full" type="url" name="more_info_link" />
                             <x-input-error :messages="$errors->get('question.more_info_link')" class="mt-2" />
                         </div>
 

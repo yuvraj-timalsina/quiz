@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Questions;
 
 use App\Models\Question;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
 use Livewire\Redirector;
 
@@ -22,7 +23,7 @@ class QuestionForm extends Component
         }
     }
 
-    public function save(): \Illuminate\Http\RedirectResponse
+    public function save() : RedirectResponse|Redirector
     {
         $this->validate();
 
