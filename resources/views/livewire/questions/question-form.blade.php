@@ -16,7 +16,7 @@
                             <x-input-error :messages="$errors->get('question_text')" class="mt-2" />
                         </div>
                         <div class="mt-4">
-                            <x-input-label for="question_options" value="Question options"/>
+                            <x-input-label for="question_options" value="Question Options"/>
                             @foreach($questionOptions as $index => $questionOption)
                                 <div class="flex mt-2">
                                     <x-text-input type="text" wire:model.defer="questionOptions.{{ $index }}.option" class="w-full" name="questions_options_{{ $index }}" id="questions_options_{{ $index }}" autocomplete="off"/>
