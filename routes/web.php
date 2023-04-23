@@ -3,18 +3,9 @@
     use App\Http\Controllers\ProfileController;
     use App\Http\Livewire\Questions\QuestionForm;
     use App\Http\Livewire\Questions\QuestionList;
+    use App\Http\Livewire\Quiz\QuizForm;
+    use App\Http\Livewire\Quiz\QuizList;
     use Illuminate\Support\Facades\Route;
-
-    /*
-    |--------------------------------------------------------------------------
-    | Web Routes
-    |--------------------------------------------------------------------------
-    |
-    | Here is where you can register web routes for your application. These
-    | routes are loaded by the RouteServiceProvider and all of them will
-    | be assigned to the "web" middleware group. Make something great!
-    |
-    */
 
     Route::view('/', 'welcome');
 
@@ -29,6 +20,11 @@
             Route::get('questions', QuestionList::class)->name('questions');
             Route::get('questions/create', QuestionForm::class)->name('questions.create');
             Route::get('questions/{question}', QuestionForm::class)->name('questions.edit');
+
+            Route::get('quizzes', QuizList::class)->name('quizzes');
+            Route::get('quizzes/create', QuizForm::class)->name('quiz.create');
+            Route::get('quizzes/{quiz}', QuizForm::class)->name('quiz.edit');
+
         });
     });
 
