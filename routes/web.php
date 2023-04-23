@@ -9,6 +9,7 @@
     use Illuminate\Support\Facades\Route;
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('quiz/{quiz}/{slug?}', [HomeController::class, 'show'])->name('quiz.show');
 
 
     Route::middleware('auth')->group(function () {
